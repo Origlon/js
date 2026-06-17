@@ -25,8 +25,8 @@ console.log("Hello world");
 
 // ----- 1. Simple if -----
 // Declare `let age = 16`. Write an if that logs "You can drive" when age >= 16.
-let age = 12;
-if (age >= 16) {
+let age1 = 12;
+if (age1 >= 16) {
   console.log("You can drive");
 } else {
   console.log("You cant");
@@ -51,54 +51,84 @@ if (number % 2 === 0) {
 // ----- 4. Grade the score -----
 // Declare `let score = 82`. Log the letter grade:
 //   90+ -> "A", 80–89 -> "B", 70–79 -> "C", below 70 -> "F".
-let score = 72; 
-if (score >=90) {
-   console.log("A");
-} else if (score >=80) {
-   console.log("B");
-} else if (score >=70) {
-   console.log("C");
+let score = 72;
+if (score >= 90) {
+  console.log("A");
+} else if (score >= 80) {
+  console.log("B");
+} else if (score >= 70) {
+  console.log("C");
 } else {
-   console.log("F")
+  console.log("F");
 }
 
 // ----- 5. Biggest of two -----
 // Declare `let a = 14` and `let b = 9`. Log whichever is larger, or "equal" if they match.
-let a = 14 
-let b = 9 
-if (a>b) {
-   console.log("a");
-} else if (b<a) {
-   console.log("b");
-} else  {
-   console.log("equal");
+let a = 14;
+let b = 9;
+if (a > b) {
+  console.log("a");
+} else if (b < a) {
+  console.log("b");
+} else {
+  console.log("equal");
 }
 
 // ----- 6. Temperature advice -----
 // Declare `let temp = 30`. Log:
 //   above 28 -> "Wear shorts", 15 to 28 -> "Wear a jacket", below 15 -> "Wear a coat".
-let temp = 12 
+let temp = 12;
 if (temp > 28) {
-   console.log("Wear shorts")
-} else if (temp > 15 && temp < 27){
-   console.log("Wear a jacket")
-} else  {
-   console.log ("Wear a coat")
+  console.log("Wear shorts");
+} else if (temp > 15 && temp < 27) {
+  console.log("Wear a jacket");
+} else {
+  console.log("Wear a coat");
 }
 // ----- 7. Login message -----
 // Declare `let username = "admin"` and `let password = "1234"`.
 // If both are correct, log "Welcome", otherwise "Access denied".
-
+let username = "admin";
+let password = 1234;
+if (username === "admin" && password === 1234) {
+  console.log("Welcome");
+} else {
+  console.log("access denied");
+}
 // ----- 8. Positive, negative, zero -----
 // Declare `let n = -5`. Log "positive", "negative", or "zero".
-
+let n = -5;
+if (n > 0) {
+  console.log("positive");
+} else if (n < 0) {
+  console.log("negative");
+} else {
+  console.log("zero");
+}
 // ----- 9. Ticket price -----
 // Declare `let age = 65`. Price: under 12 -> "$5", 12 to 64 -> "$12", 65+ -> "$8".
+let age = 65;
+if (age < 12) {
+  console.log("$5");
+} else if (age > 12 && age < 64) {
+  console.log("$12");
+} else {
+  console.log("$8");
+}
 
 // ----- 10. Traffic light -----
 // Declare `let light = "yellow"`. Log:
 //   "green" -> "Go", "yellow" -> "Slow down", "red" -> "Stop", else -> "Invalid light".
-
+let light = "yellow"
+if (light == "green") {
+  console.log("Go")
+} else if (light == "yellow") {
+  console.log("Slow down")
+} else if (light == "red") {
+  console.log("Stop")
+} else {
+  console.log("Invalid light")
+}
 /* ============================================================
    PART 2 — COMBINED PROJECT (variables + operators + if)
    ============================================================ */
@@ -106,15 +136,36 @@ if (temp > 28) {
 // ----- 1. Movie ticket machine -----
 // Variables: age, hasMembership (boolean).
 //   under 12 OR over 65 -> "$6", member of any age -> "$8", everyone else -> "$12". Log the price.
+let ages = 10
+let hasMembership = true 
+if (ages < 12 || ages >65 ){
+   console.log("$6")
+} else if (hasMembership==true){
+   console.log("$8")
+} else {
+   console.log("$12")
+}
+
 
 // ----- 2. Password strength -----
 // Variable: password (string). Using password.length:
 //   >= 12 -> "Strong", >= 8 -> "Medium", otherwise -> "Weak".
-
+let passwords = "niko"
+if (passwords.length>=12){
+   console.log("Strong")
+} else if (passwords.length>=8){
+   console.log("Medium")
+} else {
+   console.log("Weak")
+}
 // ----- 3. Game level up -----
 // let xp = 250, const levelUpAt = 200. If xp >= levelUpAt, log "Level up!" and reset xp to 0;
 // otherwise log how much XP is left. Show xp before and after.
-
+let xp = 250 
+const levelUpAt = 200 
+if (xp>=levelUpAt ){
+   console.log("Level Up")
+}
 // ----- 4. Tip calculator -----
 // Variables: bill, serviceWasGood (boolean). Good -> 20% tip, otherwise 10%.
 // Compute the tip and the total, log both.
