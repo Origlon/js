@@ -119,15 +119,15 @@ if (age < 12) {
 // ----- 10. Traffic light -----
 // Declare `let light = "yellow"`. Log:
 //   "green" -> "Go", "yellow" -> "Slow down", "red" -> "Stop", else -> "Invalid light".
-let light = "yellow"
+let light = "yellow";
 if (light == "green") {
-  console.log("Go")
+  console.log("Go");
 } else if (light == "yellow") {
-  console.log("Slow down")
+  console.log("Slow down");
 } else if (light == "red") {
-  console.log("Stop")
+  console.log("Stop");
 } else {
-  console.log("Invalid light")
+  console.log("Invalid light");
 }
 /* ============================================================
    PART 2 — COMBINED PROJECT (variables + operators + if)
@@ -136,72 +136,151 @@ if (light == "green") {
 // ----- 1. Movie ticket machine -----
 // Variables: age, hasMembership (boolean).
 //   under 12 OR over 65 -> "$6", member of any age -> "$8", everyone else -> "$12". Log the price.
-let ages = 10
-let hasMembership = true 
-if (ages < 12 || ages >65 ){
-   console.log("$6")
-} else if (hasMembership==true){
-   console.log("$8")
+let ages = 10;
+let hasMembership = true;
+if (ages < 12 || ages > 65) {
+  console.log("$6");
+} else if (hasMembership == true) {
+  console.log("$8");
 } else {
-   console.log("$12")
+  console.log("$12");
 }
-
 
 // ----- 2. Password strength -----
 // Variable: password (string). Using password.length:
 //   >= 12 -> "Strong", >= 8 -> "Medium", otherwise -> "Weak".
-let passwords = "niko"
-if (passwords.length>=12){
-   console.log("Strong")
-} else if (passwords.length>=8){
-   console.log("Medium")
+let passwords = "niko";
+if (passwords.length >= 12) {
+  console.log("Strong");
+} else if (passwords.length >= 8) {
+  console.log("Medium");
 } else {
-   console.log("Weak")
+  console.log("Weak");
 }
 // ----- 3. Game level up -----
 // let xp = 250, const levelUpAt = 200. If xp >= levelUpAt, log "Level up!" and reset xp to 0;
 // otherwise log how much XP is left. Show xp before and after.
-let xp = 250 
-const levelUpAt = 200 
-if (xp>=levelUpAt ){
-   console.log("Level Up")
-}
+let xp = 250;
+const levelUpAt = 200;
+if (xp >= levelUpAt) {
+  console.log("Level Up");
+  xp = 0;
+} else xp;
 // ----- 4. Tip calculator -----
 // Variables: bill, serviceWasGood (boolean). Good -> 20% tip, otherwise 10%.
 // Compute the tip and the total, log both.
+let bill = 150;
+let serviceWasGood = true;
+let totalAmount;
+if (serviceWasGood) {
+  totalAmount = bill + bill * 0.2;
+  console.log(totalAmount);
+} else {
+  totalAmount = bill + bill * 0.1;
+  console.log(totalAmount);
+}
 
 // ----- 5. Weather outfit -----
 // Variables: temp, isRaining (boolean).
 //   raining AND temp < 15 -> "Coat and umbrella", raining only -> "Umbrella",
 //   temp > 28 -> "T-shirt", otherwise -> "Light jacket".
-
+let tempp = 12;
+let isRaining = false;
+if (isRaining && tempp < 15) {
+  console.log("Coat and umbrella");
+} else if (isRaining) {
+  console.log("Umbrella");
+} else if (tempp > 28) {
+  console.log("T-shirt");
+} else {
+  console.log("Light jacket");
+}
 // ----- 6. Exam pass with bonus -----
 // Variables: score, attendedExtraClass (boolean).
 // Pass if score >= 50, OR if score >= 45 AND attended the extra class. Log "Pass" or "Fail".
-
+let score1 = 60;
+let attendedExtraClass = false;
+if (score1 >= 50 || (score1 >= 45 && attendedExtraClass)) {
+  console.log("Pass");
+} else {
+  console.log("Fail");
+}
 // ----- 7. Cart discount -----
 // Variables: total, isMember (boolean).
 //   total >= 100 AND member -> 20% off, total >= 100 only -> 10% off, otherwise -> no discount.
 // Log the final price.
+let total = 120;
+let isMember = true;
+let finalprice;
+if (total >= 100 && isMember) {
+  finalprice = total - total * 0.2;
+  console.log(finalprice);
+} else if (total >= 100 && isMember === false) {
+  finalprice = total - total * 0.1;
+  console.log(finalprice);
+} else {
+  console.log(totalprice);
+}
 
 // ----- 8. Login system -----
 // Variables: const correctUser, const correctPass, plus enteredUser, enteredPass, isLocked (boolean).
 // Log "Welcome" only when NOT locked AND both username and password match. Otherwise "Login failed".
+const correctUser = "niko";
+const correctPass = "1234";
+let enteredUser = "niko";
+let enteredPass = "1234";
+let isLocked = false;
+if (
+  correctPass === enteredPass &&
+  enteredUser === correctUser &&
+  isLocked === false
+) {
+  console.log("Welcome");
+} else {
+  console.log("Login failed");
+}
 
 // ----- 9. BMI category -----
 // Variables: weight (kg), height (m). bmi = weight / (height * height). Log:
 //   below 18.5 -> "Underweight", 18.5–24.9 -> "Normal", 25–29.9 -> "Overweight", 30+ -> "Obese".
-
+let weight = 90;
+let height = 1.8;
+let bmi = weight / (height * height);
+if (bmi < 18.5) {
+  console.log("Underweight");
+} else if (bmi >= 18.5 && bmi < 24.9) {
+  console.log("normal");
+} else if (bmi > 25 && bmi < 29.9) {
+  console.log("Overweight ");
+} else {
+  console.log("Obese");
+}
 // ----- 10. Mini ATM -----
 // let balance = 500, let withdrawAmount = 200, const dailyLimit = 300.
 // Allow only when withdrawAmount <= balance AND withdrawAmount <= dailyLimit.
 //   allowed -> subtract from balance, log "Success" + new balance;
 //   too much -> "Insufficient funds"; over limit -> "Over daily limit".
-
+let balance = 500;
+let withdrawAmount = 200;
+const dailyLimit = 300;
+let remainingbalance;
+if (withdrawAmount <= balance && withdrawAmount <= dailyLimit) {
+  remainingbalance = balance - withdrawAmount;
+  console.log( "Success" , remainingbalance);
+} else {
+   console.log("Insufficient funds" , "Over daily limit")
+}
 // ----- 11. Leap year check -----
 // Variable: year. Leap when divisible by 4 AND (not divisible by 100 OR divisible by 400).
 // Use % with && and ||. Log "Leap year" or "Normal year". Test with 2000, 1900, 2024.
-
+let year = 2026
+if (year / 4 ===0 && year / 100 !== 0 || year / 400 !==0 )
+{
+   console.log("Leap year")
+   
+} else {
+   console.log("Normal year")
+}
 // ----- 12. FizzBuzz (one number) -----
 // Variable: n. divisible by 3 AND 5 -> "FizzBuzz", by 3 only -> "Fizz", by 5 only -> "Buzz",
 // otherwise -> the number itself. Test with 15, 9, 10, 7.
